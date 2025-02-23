@@ -1,0 +1,61 @@
+.button-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: var(--border-radius-large);
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+
+    @include hover {
+        border-color: var(--color-accent);
+    }
+
+    &-add {
+        border: 1px solid #cad5ff;
+
+        @include hover {
+            .button-panel-add-circle {
+                border-color: var(--color-accent);
+            }
+
+            .button-panel-add-line {
+                background-color: var(--color-accent);
+            }
+        }
+
+        &-circle {
+            height: 25px;
+            width: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid #cad5ff;
+            border-radius: 50%;
+            transition: border-color 0.2s;
+        }
+
+        &-line {
+            height: 1px;
+            width: 16px;
+            background-color: #cad5ff;
+            transition: background-color 0.2s;
+
+            &-rotate {
+                rotate: 90deg;
+            }
+        }
+    }
+}
+
+.panel__menu-items.is-active {
+    @include hover {
+        .button-panel {
+            border-color: var(--color-light);
+        }
+    }
+}

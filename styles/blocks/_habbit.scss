@@ -1,0 +1,86 @@
+.habbit {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    background-color: #fff;
+
+    & {
+        margin-bottom: 12px;
+    }
+
+    &__day {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FBFAFF;
+        border-radius: 10px 0 0 10px;
+        border-right: 1px solid #E7EBFB;
+        font-size: 14px;
+        padding-block: 19px;
+        min-width: 129px;
+    }
+
+    &__description {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 24px 13px;
+        flex: 1;
+        gap: 14px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    &__button img {
+        pointer-events: none;
+    }
+
+    &__form {
+        display: contents;
+
+        &-input {
+            border: 1px solid #e7ebfb;
+            border-radius: 9px;
+            background-color: var(--color-light);
+            width: 100%;
+            position: relative;
+            height: 39px;
+            padding-inline-start: 48px;
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                color: #8899a8;
+            }
+
+            &:focus {
+                outline-color: var(--color-accent);
+            }
+        }
+
+        &-img {
+            position: absolute;
+            top: 14px;
+            left: 40px;
+        }
+
+        &-button {
+            background-color: #edecfe;
+            font-weight: 500;
+            font-size: 13px;
+            color: var(--color-accent);
+            padding: 14px 32px;
+            border-radius: 9px;
+            transition: color 0.2s, background-color 0.2s;
+
+            @include hover {
+                color: var(--color-light);
+                background-color: var(--color-accent);
+            }
+        }
+    }
+}

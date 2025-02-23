@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habbit - трекер привычек</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="module" src="./scripts/main.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <div class="panel">
+            <a href="/">
+                <img src="./images/logo.svg" alt="Логотип Habbit" class="logo" width="66" height="71">
+            </a>
+            <nav class="panel__menu">
+                <button type="submit" class="button button-panel button-panel-add" aria-label="Добавить привычку" title="Добавить привычку">
+                    <span class="button-panel-add-circle">
+                        <span class="button-panel-add-line"></span>
+                        <span class="button-panel-add-line button-panel-add-line-rotate"></span>
+                    </span>
+                </button>
+                <ul class="panel__menu-list">
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <header class="header">
+                <h1 class="header__title">
+                    Название вашей привычки
+                </h1>
+                <div class="progress">
+                    <div class="progress__top">
+                        <h2 class="progress__title">Прогресс</h2>
+                        <span class="progress__percent">%</span>
+                    </div>
+                    <div class="progress__bar">
+                        <span class="progress__bar-cover"></span>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <section class="habbits">
+                    <ul class="habbits__menu">
+                        <ul class= "habbits__menu habbits__menu_active">
+                        </ul>
+                        <li class="habbit">
+                            <p class="habbit__day">День</p>
+                            <form class="habbit__form" >
+                                <div class="habbit__description">
+                                    <input name="comment" class="habbit__form-input" type="text" placeholder="Комментарий..." />
+                                    <img class="habbit__form-img" src="./images/comment.svg" alt="">
+                                    <button class="button habbit__form-button">Готово</button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <template id="panel-template">
+        <li class="panel__menu-items">
+            <button class="button button-panel">
+                <img src="" alt="" class="icon-panel">
+            </button>
+        </li>
+    </template>
+
+    <template id="habbit-template">
+        <li class="habbit">
+            <p class="habbit__day"></p>
+            <div class="habbit__description">
+                <h3 class="habbit__text"></h3>
+                <button class="button habbit__button">
+                    <img src="./icon/food.svg" alt="" />
+                </button>
+            </div>
+        </li>
+    </template>
+</body>
+</html>
